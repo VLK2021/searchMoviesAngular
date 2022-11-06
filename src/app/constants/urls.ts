@@ -1,0 +1,9 @@
+import {environment} from "../../environments/environment";
+import {MY_KEY_API} from "./key.api";
+
+const {API:baseURL} = environment;
+
+export const urls = {
+movies: `${baseURL}/discover/movie?sort_by=popularity.desc&api_key=${MY_KEY_API}`
+}
+
