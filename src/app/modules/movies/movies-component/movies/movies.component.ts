@@ -11,13 +11,13 @@ import {IMovie} from "../../../../interfaces";
 })
 
 export class MoviesComponent implements OnInit {
-  movies: IMovie[];
+  movies: any;
 
   constructor(private movieService: MoviesService) {
   }
-
   ngOnInit(): void {
-    this.movieService.getAll().subscribe(value => console.log(value))
+    //@ts-ignore
+    this.movieService.getAll().subscribe(({results})=> this.movies = results)
   }
 
 }

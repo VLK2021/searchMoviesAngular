@@ -15,8 +15,8 @@ export class MoviesService {
   constructor(private httpClient: HttpClient) {
   }
 
-  getAll(): Observable<IMovie[]> {
-    return this.httpClient.get<IMovie[]>(urls.movies)
+  getAll(page = 1): Observable<IMovie[]> {
+    return this.httpClient.get<IMovie[]>(urls.movies(page))
   }
 
 
