@@ -10,7 +10,7 @@
   --var-bg-footer: #787272;
   --var-header-color: deepskyblue;
   --var-footer-color: deepskyblue;
-  /*--var-bg-all: url(./images/black.jpg) no-repeat center fixed;*/
+  --var-bg-all: url(./app/images/black.jpg) repeat center fixed;
   --var-bg-btn: #787272;
   --var-color-btn: deepskyblue;
   --var-box-shedow-header: 0 0 0 2px #3e3e3e, 0 0 0 5px #3e3e3e,

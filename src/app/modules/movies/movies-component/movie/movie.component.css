@@ -1,15 +1,15 @@
 .app-movie {
   width: 100%;
-  height: 35rem;
+  height: 30rem;
   background: gainsboro;
   border: 1px solid gray;
   border-radius: 0.5rem;
-
+  box-shadow: var(--var-box-shedow-header);
 }
 
 .app-movie-img {
   width: 100%;
-  height: 70%;
+  height: 75%;
   text-align: center;
   font-size: 0;
 }
@@ -22,17 +22,19 @@
 
 .app-movie-inf{
   width: 100%;
-  height: 30%;
+  height: 25%;
   background: var(--var-bg-header);
   border-radius: 0 0 0.5rem 0.5rem ;
-  padding: 0.5rem;
+  padding: 0.3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 
 .app-movie-inf-first{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.3rem;
 }
 
 .app-movie-inf-title{
@@ -67,5 +69,5 @@
   text-align: center;
   font-weight: bold;
   font-size: 1.5rem;
-  padding: 0.8rem;
+  padding: 0.3rem;
 }

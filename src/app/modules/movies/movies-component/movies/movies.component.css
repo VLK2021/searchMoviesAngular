@@ -1,5 +1,6 @@
 .app-movies{
   width: 100%;
+  background: var(--var-bg-all);
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
