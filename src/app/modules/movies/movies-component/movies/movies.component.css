@@ -1,0 +1,13 @@
+.app-movies{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content:space-evenly;
+}
+
+.app-movies-block{
+  width: 23%;
+  padding: 0.5rem;
+}

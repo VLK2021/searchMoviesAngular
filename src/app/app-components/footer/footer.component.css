@@ -1,0 +1,5 @@
+.footer{
+  width: 100%;
+  background: var(--var-bg-footer);
+  min-height: 3rem;
+}
