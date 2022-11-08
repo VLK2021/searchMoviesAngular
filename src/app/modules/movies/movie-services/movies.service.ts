@@ -18,6 +18,4 @@ export class MoviesService {
   getAll(page = 1): Observable<IMovie[]> {
     return this.httpClient.get<IMovie[]>(urls.movies(page))
   }
-
-
 }
