@@ -16,6 +16,7 @@ export class MoviesComponent implements OnInit {
   total_pages: number = 500;
   total_results: number;
 
+
   constructor(private movieService: MoviesService) {
   }
 
