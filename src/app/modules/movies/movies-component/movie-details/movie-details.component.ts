@@ -3,6 +3,7 @@ import {ActivatedRoute} from "@angular/router";
 
 import {IMovieDetails} from "../../../../interfaces";
 import {MoviesService} from "../../movie-services";
+import {IMG_URL} from "../../../../constants";
 
 @Component({
   selector: 'app-movie-details',
@@ -12,13 +13,19 @@ import {MoviesService} from "../../movie-services";
 
 export class MovieDetailsComponent implements OnInit {
   movieDetails: IMovieDetails;
+  IMG_URL: string = IMG_URL;
 
   constructor(private activatedRoute: ActivatedRoute,
-              private moviesService: MoviesService,
-              ) { }
+              private moviesService: MoviesService,) {
+
+  }
 
   ngOnInit(): void {
-    this.activatedRoute.params.subscribe(value => console.log(value) )
+    this.activatedRoute.params.subscribe(({id}) => {
+      this.moviesService.getById(id).subscribe(value => {
+        this.movieDetails = value;
+      })
+    } )
   }
 
 }

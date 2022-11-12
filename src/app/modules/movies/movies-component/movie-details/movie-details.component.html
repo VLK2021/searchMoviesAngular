@@ -1,5 +1,63 @@
-<p>movie-details works!</p>
+<div class="movieDetails">
+  <h1 class='movieDetails-title'>{{movieDetails?.original_title}}</h1>
 
-<a routerLink="">
-  <button>back</button>
-</a>
+  <div class="movieDetails-block_title_and_info">
+    <div class="movieDetails-img">
+      <img [src]=IMG_URL+movieDetails.backdrop_path alt="No Image Available"/>
+    </div>
+
+    <div class="movieDetails-block_title_and_info-block_info">
+      <div><strong class='movieDetails-info-titles'>Release date:</strong> {{movieDetails.release_date}}</div>
+      <div><strong class='movieDetails-info-titles'>Budget:</strong> {{movieDetails.budget}}</div>
+      <div><strong class='movieDetails-info-titles'>Vote average:</strong> {{movieDetails.vote_average}}</div>
+      <div><strong class='movieDetails-info-titles'>Vote count:</strong> {{movieDetails.vote_count}}</div>
+      <div><strong class='movieDetails-info-titles'>Revenue:</strong> {{movieDetails.revenue}}</div>
+      <div><strong class='movieDetails-info-titles'>Popularity:</strong> {{movieDetails.popularity}}</div>
+      <div><strong class='movieDetails-info-titles'>Original language:</strong> {{movieDetails.original_language}}
+      </div>
+    </div>
+  </div>
+
+  <h3 class='movieDetails-overview'>{{movieDetails.overview}}</h3>
+
+<!--  <div>-->
+<!--    <div class='movieDetails-color-all-first'>Production companies:</div>-->
+<!--    <div class='movieDetails-Production_companies'>-->
+<!--      {movieDetails.production_companies && movieDetails.production_companies.map(value =>-->
+<!--                        <div key={value.id} className='movieDetails-Production_companies-block'>-->
+<!--      {value.name}-->
+<!--      {<div><img class='movieDetails-Production_companies-img' [src]=IMG_URL + value.logo_path-->
+<!--                 alt="poster"/></div>}-->
+<!--      </div>-->
+<!--  )}-->
+<!--    </div>-->
+<!--  </div>-->
+
+<!--  <div class='movieDetails-genres'>-->
+<!--    <div class='movieDetails-color-all-first'>Genres:</div>-->
+<!--    <div class='movieDetails-genres-block'>{-->
+<!--      genres && genres.map(value =>-->
+<!--          <NavLink to={`/genres/${value.id.toString()}`}>-->
+<!--                        <div key={value.id}-->
+<!--      className='movieDetails-genres-block-one'>{value.name}-->
+<!--      </div>-->
+<!--  </NavLink>)-->
+<!--      }</div>-->
+<!--  </div>-->
+
+  <div class='movieDetails-info'>
+    <div class="movieDetails-info-videos" >
+<!--      {results && results.map(video => <Videos key={video.id} video={video}/>)}-->
+    </div>
+
+    <div class="homePage"><strong class='movieDetails-info-titles'>Homepage:</strong>
+      <a href="{{movieDetails.homepage}}" target="_blank">{{movieDetails.homepage}}</a>
+    </div>
+  </div>
+
+  <a routerLink="">
+    <button class="movieDetails-btn">Back</button>
+  </a>
+</div>
+
+
