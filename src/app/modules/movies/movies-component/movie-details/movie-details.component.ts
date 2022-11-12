@@ -14,10 +14,11 @@ export class MovieDetailsComponent implements OnInit {
   movieDetails: IMovieDetails;
 
   constructor(private activatedRoute: ActivatedRoute,
-              private moviesService: MoviesService) { }
+              private moviesService: MoviesService,
+              ) { }
 
   ngOnInit(): void {
-    this.activatedRoute.data.subscribe(value => console.log(value))
+    this.activatedRoute.params.subscribe(value => console.log(value) )
   }
 
 }

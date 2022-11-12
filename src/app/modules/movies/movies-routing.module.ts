@@ -6,21 +6,13 @@ import {MovieDetailsComponent} from "./movies-component/movie-details/movie-deta
 
 
 let routes: Routes = [
-  {
-    path: '', component: MoviesComponent,
-    children: [
-      {path: ':id', component: MovieDetailsComponent}
-    ]
-  }
-]
+  {path: '', component: MoviesComponent},
+  {path: ':id', component: MovieDetailsComponent}
+];
 
 @NgModule({
-  imports: [
-    RouterModule.forChild(routes)
-  ],
-  exports: [
-    RouterModule
-  ]
+  imports: [RouterModule.forChild(routes)],
+  exports: [RouterModule]
 })
 export class MoviesRoutingModule {
 }
