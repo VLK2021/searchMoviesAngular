@@ -4,14 +4,17 @@
 
 <div class="pagination">
   <ng-container *ngIf="page > 1">
-    <button mat-button (click)="goStartOrEnd(1)">{{ 1 }}</button>
-    <button mat-button (click)="goNextOrPrevious(-1)">{{page-1}} <<</button>
+    <button class="btn" (click)="goStartOrEnd(1)">{{ 1 }}</button>
+    <button class="btn" (click)="goNextOrPrevious(-1)">{{page-1}} <<</button>
   </ng-container>
-  <button mat-button disabled>{{page}}</button>
+
+  <button class="btn size" disabled>{{page}}</button>
+
   <ng-container *ngIf="page < total_pages">
-    <button mat-button (click)="goNextOrPrevious(1)"> >> {{ page+1}}</button>
+    <button class="btn" (click)="goNextOrPrevious(1)"> >> {{ page+1}}</button>
   </ng-container>
+
   <ng-container *ngIf="page !== total_pages">
-    <button mat-button (click)="goStartOrEnd(total_pages)">{{ total_pages }}</button>
+    <button class="btn" (click)="goStartOrEnd(total_pages)">{{ total_pages }}</button>
   </ng-container>
 </div>

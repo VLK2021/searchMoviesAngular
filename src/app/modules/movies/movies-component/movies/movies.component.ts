@@ -13,7 +13,7 @@ import {IMovie} from "../../../../interfaces";
 export class MoviesComponent implements OnInit {
   movies: IMovie[];
   page: number = 1;
-  total_pages: number;
+  total_pages: number = 500;
   total_results: number;
 
   constructor(private movieService: MoviesService) {
@@ -24,7 +24,7 @@ export class MoviesComponent implements OnInit {
     this.movieService.getAll(this.page).subscribe(({page, results, total_pages, total_results}) => {
       this.movies = results;
       this.page = page;
-      this.total_pages = total_pages;
+      // this.total_pages = total_pages;
       this.total_results = total_results;
     })
   }
@@ -40,7 +40,7 @@ export class MoviesComponent implements OnInit {
     this.movieService.getAll(this.page).subscribe(({page, results, total_pages, total_results}) => {
       this.movies = results;
       this.page = page;
-      this.total_pages = total_pages;
+      // this.total_pages = total_pages;
       this.total_results = total_results;
     })
   }
