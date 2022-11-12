@@ -12,7 +12,7 @@ import {IMovie} from "../../../../interfaces";
 
 export class MoviesComponent implements OnInit {
   movies: IMovie[];
-  page: number;
+  page: number = 1;
   total_pages: number;
   total_results: number;
 
@@ -21,7 +21,7 @@ export class MoviesComponent implements OnInit {
 
   ngOnInit(): void {
     //@ts-ignore
-    this.movieService.getAll().subscribe(({page, results, total_pages, total_results}) => {
+    this.movieService.getAll(this.page).subscribe(({page, results, total_pages, total_results}) => {
       this.movies = results;
       this.page = page;
       this.total_pages = total_pages;
@@ -30,4 +30,18 @@ export class MoviesComponent implements OnInit {
   }
 
 
+  goStartOrEnd(page: number) {
+    this.page = page;
+  }
+
+  goNextOrPrevious(page: number) {
+    this.page += page;
+    //@ts-ignore
+    this.movieService.getAll(this.page).subscribe(({page, results, total_pages, total_results}) => {
+      this.movies = results;
+      this.page = page;
+      this.total_pages = total_pages;
+      this.total_results = total_results;
+    })
+  }
 }

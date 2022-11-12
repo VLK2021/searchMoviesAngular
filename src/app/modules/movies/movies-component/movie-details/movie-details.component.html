@@ -33,22 +33,21 @@
 <!--    </div>-->
 <!--  </div>-->
 
-<!--  <div class='movieDetails-genres'>-->
-<!--    <div class='movieDetails-color-all-first'>Genres:</div>-->
-<!--    <div class='movieDetails-genres-block'>{-->
-<!--      genres && genres.map(value =>-->
-<!--          <NavLink to={`/genres/${value.id.toString()}`}>-->
-<!--                        <div key={value.id}-->
-<!--      className='movieDetails-genres-block-one'>{value.name}-->
-<!--      </div>-->
-<!--  </NavLink>)-->
-<!--      }</div>-->
-<!--  </div>-->
+  <div class='movieDetails-genres'>
+    <div class='movieDetails-color-all-first'>Genres:</div>
+
+    <div class="movieDetails-genres-gen">
+      <div *ngFor="let value of movieDetails.genres">
+        <div class='movieDetails-genres-block-one'>{{value.name}}</div>
+      </div>
+    </div>
+  </div>
 
   <div class='movieDetails-info'>
     <div class="movieDetails-info-videos" >
 <!--      {results && results.map(video => <Videos key={video.id} video={video}/>)}-->
     </div>
+
 
     <div class="homePage"><strong class='movieDetails-info-titles'>Homepage:</strong>
       <a href="{{movieDetails.homepage}}" target="_blank">{{movieDetails.homepage}}</a>

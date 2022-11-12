@@ -5,6 +5,7 @@ import {IMovieDetails} from "../../../../interfaces";
 import {MoviesService} from "../../movie-services";
 import {IMG_URL} from "../../../../constants";
 
+
 @Component({
   selector: 'app-movie-details',
   templateUrl: './movie-details.component.html',
