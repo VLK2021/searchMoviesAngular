@@ -1,0 +1,22 @@
+ul{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: var(--var-bg-all);
+  box-sizing: border-box;
+  padding: 2rem 0 2rem 0;
+}
+
+ul > li > a{
+  color: var(--var-header-color);
+  list-style: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+li{
+  list-style: none;
+}
+
+
