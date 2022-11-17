@@ -7,7 +7,6 @@ import {MoviesRoutingModule} from "./movies-routing.module";
 import { MovieComponent } from './movies-component/movie/movie.component';
 import { MovieDetailsComponent } from './movies-component/movie-details/movie-details.component';
 import {MoviesService} from "./movie-services";
-import {RouterModule} from "@angular/router";
 
 
 @NgModule({
