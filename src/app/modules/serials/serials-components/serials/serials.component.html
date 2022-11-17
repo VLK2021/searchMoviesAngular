@@ -1,3 +1,20 @@
 <div class="app-serials">
   <app-serial *ngFor="let serial of serials" [serial]="serial" class="app-serials-block"></app-serial>
 </div>
+
+<div class="pagination">
+  <ng-container *ngIf="page > 1">
+    <button class="btn" (click)="goStartOrEnd(1)">{{ 1 }}</button>
+    <button class="btn" (click)="goNextOrPrevious(-1)">{{page-1}} <<</button>
+  </ng-container>
+
+  <button class="btn size" disabled>{{page}}</button>
+
+  <ng-container *ngIf="page < total_pages">
+    <button class="btn" (click)="goNextOrPrevious(1)"> >> {{ page+1}}</button>
+  </ng-container>
+
+  <ng-container *ngIf="page !== total_pages">
+    <button class="btn" (click)="goStartOrEnd(total_pages)">{{ total_pages }}</button>
+  </ng-container>
+</div>

@@ -1,1 +1,18 @@
-<p>serial works!</p>
+<div class="app-serial">
+
+  <a routerLink="{{serial.id}}">
+  <div class="app-serial-img">
+    <img [src]=IMG_URL+serial.poster_path alt="No Image Available">
+  </div>
+
+  <div class="app-serial-inf">
+    <div class="app-serial-inf-first">
+      <div class="app-serial-inf-title">{{serial.name}}</div>
+      <div class="tag">{{serial.vote_average}}</div>
+    </div>
+
+    <div class="app-serial-inf-second-year">{{serial.first_air_date}}</div>
+  </div>
+  </a>
+
+</div>

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
-import {ISerial} from "../../../../interfaces/interfaceSerial/ISerial";
 import {SerialsService} from "../../serials-services";
+import {ISerial} from "../../../../interfaces";
 
 
 @Component({
@@ -27,6 +27,21 @@ export class SerialsComponent implements OnInit {
       // this.total_pages = total_pages;
       this.total_results = total_results;
       console.log(results);
+    })
+  }
+
+  goStartOrEnd(page: number) {
+    this.page = page;
+  }
+
+  goNextOrPrevious(page: number) {
+    this.page += page;
+    //@ts-ignore
+    this.serialService.getAll(this.page).subscribe(({page, results, total_pages, total_results}) => {
+      this.serials = results;
+      this.page = page;
+      // this.total_pages = total_pages;
+      this.total_results = total_results;
     })
   }
 
