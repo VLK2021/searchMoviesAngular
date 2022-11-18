@@ -2,8 +2,8 @@ import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {Observable, Observer} from "rxjs";
 
-import {ISerial} from "../../../interfaces/interfaceSerial/ISerial";
 import {urls} from "../../../constants/urls";
+import {ISerial, ISerialDetails} from "../../../interfaces";
 
 
 @Injectable({
@@ -17,6 +17,10 @@ export class SerialsService {
 
   getAll(page:number): Observable<ISerial[]> {
     return this.httpClient.get<ISerial[]>(urls.serials(page))
+  }
+
+  getById(id:number): Observable<ISerialDetails>{
+    return this.httpClient.get<ISerialDetails>(urls.singleSerial(id))
   }
 
 

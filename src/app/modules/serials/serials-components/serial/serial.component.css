@@ -40,14 +40,19 @@
 .app-serial-inf-title{
   font-size: 1.5rem;
   font-weight: bold;
+  color: var(--var-header-color);
 }
 
 .tag {
+  width: 2.5rem;
   background: #3e3e3e;
   padding: 0.3rem;
   box-sizing: border-box;
   font-weight: bold;
   font-size: 1.2rem;
+  border-radius: 0.5rem;
+  text-align: center;
+  color: grey;
 }
 
 /*.tag.green {*/
@@ -70,8 +75,11 @@
   font-weight: bold;
   font-size: 1.5rem;
   padding: 0.3rem;
+  color: var(--var-header-color);
 }
 
 a{
   text-decoration: none;
 }
+
+

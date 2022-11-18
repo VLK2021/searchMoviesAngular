@@ -20,18 +20,18 @@
 
   <h3 class='movieDetails-overview'>{{movieDetails?.overview}}</h3>
 
-<!--  <div>-->
-<!--    <div class='movieDetails-color-all-first'>Production companies:</div>-->
-<!--    <div class='movieDetails-Production_companies'>-->
-<!--      {movieDetails.production_companies && movieDetails.production_companies.map(value =>-->
-<!--                        <div key={value.id} className='movieDetails-Production_companies-block'>-->
-<!--      {value.name}-->
-<!--      {<div><img class='movieDetails-Production_companies-img' [src]=IMG_URL + value.logo_path-->
-<!--                 alt="poster"/></div>}-->
-<!--      </div>-->
-<!--  )}-->
-<!--    </div>-->
-<!--  </div>-->
+  <div>
+    <div class='movieDetails-color-all-first'>Production companies:</div>
+
+    <div class="movieDetails-Production_companies">
+      <div *ngFor="let company of movieDetails.production_companies">
+        <div class="movieDetails-Production_companies-block">
+          <div class="movieDetails-Production_companies-block-tittle">{{company.name}}</div>
+          <div><img class="movieDetails-Production_companies-img" [src]=IMG_URL+company.logo_path alt="poster"></div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <div class='movieDetails-genres'>
     <div class='movieDetails-color-all-first'>Genres:</div>
@@ -44,8 +44,8 @@
   </div>
 
   <div class='movieDetails-info'>
-    <div class="movieDetails-info-videos" >
-<!--      {results && results.map(video => <Videos key={video.id} video={video}/>)}-->
+    <div class="movieDetails-info-videos">
+      <!--      {results && results.map(video => <Videos key={video.id} video={video}/>)}-->
     </div>
 
 
@@ -54,7 +54,7 @@
     </div>
   </div>
 
-    <button (click)="goBack()" class="movieDetails-btn">Back</button>
+  <button (click)="goBack()" class="movieDetails-btn">Back</button>
 
 </div>
 

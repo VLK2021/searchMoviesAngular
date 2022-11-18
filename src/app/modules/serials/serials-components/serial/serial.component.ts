@@ -20,4 +20,14 @@ export class SerialComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  // setNewClass(vote: number) {
+  //   if (vote >= 8) {
+  //     return 'green'
+  //   } else if (vote >= 6) {
+  //     return 'orange'
+  //   } else {
+  //     return 'red'
+  //   }
+  // };
+
 }

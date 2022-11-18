@@ -40,6 +40,7 @@
 .app-movie-inf-title{
   font-size: 1.5rem;
   font-weight: bold;
+  color: var(--var-header-color);
  }
 
 .tag {
@@ -48,6 +49,8 @@
   box-sizing: border-box;
   font-weight: bold;
   font-size: 1.2rem;
+  color: gray;
+  border-radius: 0.3rem;
 }
 
 /*.tag.green {*/
@@ -70,6 +73,7 @@
   font-weight: bold;
   font-size: 1.5rem;
   padding: 0.3rem;
+  color: var(--var-header-color);
 }
 
 a{
