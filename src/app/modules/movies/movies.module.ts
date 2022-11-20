@@ -7,13 +7,15 @@ import {MoviesRoutingModule} from "./movies-routing.module";
 import { MovieComponent } from './movies-component/movie/movie.component';
 import { MovieDetailsComponent } from './movies-component/movie-details/movie-details.component';
 import {MoviesService} from "./movie-services";
+import { SearchMoviesComponent } from './movies-component/search-movies/search-movies.component';
 
 
 @NgModule({
   declarations: [
     MoviesComponent,
     MovieComponent,
-    MovieDetailsComponent
+    MovieDetailsComponent,
+    SearchMoviesComponent,
   ],
   imports: [
     CommonModule,

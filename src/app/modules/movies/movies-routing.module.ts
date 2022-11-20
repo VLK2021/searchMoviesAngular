@@ -3,11 +3,13 @@ import {RouterModule, Routes} from "@angular/router";
 
 import {MoviesComponent} from "./movies-component/movies/movies.component";
 import {MovieDetailsComponent} from "./movies-component/movie-details/movie-details.component";
+import {SearchMoviesComponent} from "./movies-component/search-movies/search-movies.component";
 
 
 let routes: Routes = [
   {path: '', component: MoviesComponent},
-  {path: ':id', component: MovieDetailsComponent}
+  {path: 'search', component: SearchMoviesComponent},
+  {path: ':id', component: MovieDetailsComponent},
 ];
 
 @NgModule({
