@@ -1,0 +1,5 @@
+.app-search-movies{
+  width: 100%;
+  min-height: 100vh;
+  background: var(--var-bg-all);
+}

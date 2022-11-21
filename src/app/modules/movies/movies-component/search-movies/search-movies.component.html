@@ -1,1 +1,4 @@
-<p>search-movies works!</p>
+<div class="app-search-movies">
+  <input [(ngModel)]="word" #wordX="ngModel" required>
+  <button (click)="search()">search</button>
+</div>

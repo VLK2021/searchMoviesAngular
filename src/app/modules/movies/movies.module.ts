@@ -8,6 +8,7 @@ import { MovieComponent } from './movies-component/movie/movie.component';
 import { MovieDetailsComponent } from './movies-component/movie-details/movie-details.component';
 import {MoviesService} from "./movie-services";
 import { SearchMoviesComponent } from './movies-component/search-movies/search-movies.component';
+import {FormsModule} from "@angular/forms";
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { SearchMoviesComponent } from './movies-component/search-movies/search-m
   imports: [
     CommonModule,
     MoviesRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   exports: [
     MoviesComponent,
