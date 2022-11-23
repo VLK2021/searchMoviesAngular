@@ -17,10 +17,11 @@ import {ITrailer} from "../../../../interfaces/interfaceTrailer/ITrailer";
 
 export class MovieDetailsComponent implements OnInit {
   movieDetails: IMovieDetails;
+  trailers: ITrailer[];
   IMG_URL: string = IMG_URL;
   YOUTUBE_URL: string = YOUTUBE_URL;
-  trailers: ITrailer[];
-
+  videoPath: string;
+  isVisible = false;
 
   constructor(private activatedRoute: ActivatedRoute,
               private moviesService: MoviesService,
@@ -38,7 +39,7 @@ export class MovieDetailsComponent implements OnInit {
       //@ts-ignore
       this.moviesService.getTrailerById(id).subscribe(({results}) => {
         this.trailers = results;
-        console.log(results);
+        this.videoPath = results[0].key;
       });
     })
 
@@ -46,6 +47,10 @@ export class MovieDetailsComponent implements OnInit {
 
   goBack(): void {
     this.location.back();
+  }
+
+  click() {
+    this.isVisible = !this.isVisible;
   }
 
 

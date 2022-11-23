@@ -33,8 +33,6 @@ export class SearchMoviesComponent implements OnInit {
       this.page = page;
       this.total_pages = total_pages;
       this.total_results = total_results;
-      console.log(results);
-      console.log(page);
     });
   }
 

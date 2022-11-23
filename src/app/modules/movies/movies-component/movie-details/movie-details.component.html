@@ -43,18 +43,24 @@
     </div>
   </div>
 
+
   <div class='movieDetails-info'>
     <div class="movieDetails-info-videos">
-      <div *ngFor="let trailer of trailers">
-        <iframe
-          [src]="YOUTUBE_URL+trailer['key']"
-          width="350"
-          height="175"
-          allow="autoplay; encrypted-media"
-          allowfullscreen
-        ></iframe>
+      <div class="movieDetails-info-videos-a">
+        <a href="{{YOUTUBE_URL}}{{videoPath}}" target="map" (click)="click()">Watch trailer</a>
       </div>
+
+      <iframe
+        name="map"
+        width="600"
+        height="280"
+        allow="autoplay; encrypted-media"
+        allowfullscreen
+        [frameBorder]="0"
+        class="{{isVisible ? 'frame-Z' : 'frame-none'}}"
+      ></iframe>
     </div>
+
     <div class="homePage"><strong class='movieDetails-info-titles'>Homepage:</strong>
       <a href="{{movieDetails?.homepage}}" target="_blank">{{movieDetails?.homepage}}</a>
     </div>
