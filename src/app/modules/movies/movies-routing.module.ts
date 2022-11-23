@@ -10,6 +10,7 @@ let routes: Routes = [
   {path: '', component: MoviesComponent},
   {path: 'search', component: SearchMoviesComponent},
   {path: ':id', component: MovieDetailsComponent},
+  {path:'search/:id', component: MovieDetailsComponent}
 ];
 
 @NgModule({

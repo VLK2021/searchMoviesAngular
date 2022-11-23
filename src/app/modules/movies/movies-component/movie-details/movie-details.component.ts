@@ -5,6 +5,8 @@ import {Location} from '@angular/common';
 import {IMovieDetails} from "../../../../interfaces";
 import {MoviesService} from "../../movie-services";
 import {IMG_URL} from "../../../../constants";
+import {YOUTUBE_URL} from "../../../../constants";
+import {ITrailer} from "../../../../interfaces/interfaceTrailer/ITrailer";
 
 
 @Component({
@@ -16,6 +18,8 @@ import {IMG_URL} from "../../../../constants";
 export class MovieDetailsComponent implements OnInit {
   movieDetails: IMovieDetails;
   IMG_URL: string = IMG_URL;
+  YOUTUBE_URL: string = YOUTUBE_URL;
+  trailers: ITrailer[];
 
 
   constructor(private activatedRoute: ActivatedRoute,
@@ -28,10 +32,21 @@ export class MovieDetailsComponent implements OnInit {
       this.moviesService.getById(id).subscribe(value => {
         this.movieDetails = value;
       })
+    });
+
+    this.activatedRoute.params.subscribe(({id}) => {
+      //@ts-ignore
+      this.moviesService.getTrailerById(id).subscribe(({results}) => {
+        this.trailers = results;
+        console.log(results);
+      });
     })
+
   }
 
   goBack(): void {
     this.location.back();
   }
+
+
 }

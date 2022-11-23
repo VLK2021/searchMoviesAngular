@@ -24,7 +24,7 @@
     <div class='movieDetails-color-all-first'>Production companies:</div>
 
     <div class="movieDetails-Production_companies">
-      <div *ngFor="let company of movieDetails.production_companies">
+      <div *ngFor="let company of movieDetails?.production_companies">
         <div class="movieDetails-Production_companies-block">
           <div class="movieDetails-Production_companies-block-tittle">{{company.name}}</div>
           <div><img class="movieDetails-Production_companies-img" [src]=IMG_URL+company.logo_path alt="poster"></div>
@@ -45,9 +45,16 @@
 
   <div class='movieDetails-info'>
     <div class="movieDetails-info-videos">
-      <!--      {results && results.map(video => <Videos key={video.id} video={video}/>)}-->
+      <div *ngFor="let trailer of trailers">
+        <iframe
+          [src]="YOUTUBE_URL+trailer['key']"
+          width="350"
+          height="175"
+          allow="autoplay; encrypted-media"
+          allowfullscreen
+        ></iframe>
+      </div>
     </div>
-
     <div class="homePage"><strong class='movieDetails-info-titles'>Homepage:</strong>
       <a href="{{movieDetails?.homepage}}" target="_blank">{{movieDetails?.homepage}}</a>
     </div>
