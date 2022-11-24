@@ -8,7 +8,7 @@
   <div class="app-serial-inf">
     <div class="app-serial-inf-first">
       <div class="app-serial-inf-title">{{serial.name}}</div>
-      <div class="tag">{{serial.vote_average}}</div>
+      <div class="tag" [ngStyle]="{color: serial.vote_average <= 7? 'red' : 'green'}">{{serial.vote_average}}</div>
     </div>
 
     <div class="app-serial-inf-second-year">{{serial.first_air_date}}</div>

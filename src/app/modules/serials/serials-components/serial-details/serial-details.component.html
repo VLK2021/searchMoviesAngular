@@ -1,14 +1,20 @@
 <div class="serialDetails">
   <h1 class="serialDetails-tittle">{{serialDetails?.original_name}}</h1>
 
-  <div class="serialDetails-block_title_and_info">
+  <div class="serialDetails-block_title_and_info backgroundFon"
+        [ngStyle]="{'background-image': 'url('+IMG_URL+serialDetails.backdrop_path+')'}"
+  >
     <div class="serialDetails-img">
-      <img [src]=IMG_URL+serialDetails?.backdrop_path alt="No Image Available"/>
+      <img [src]=IMG_URL+serialDetails?.poster_path alt="No Image Available"/>
     </div>
 
     <div class="serialDetails-block_title_and_info-block_info">
-
     </div>
-
   </div>
+
+  <div class="serialDetails-overview">
+    {{serialDetails.overview}}
+  </div>
+
+
 </div>

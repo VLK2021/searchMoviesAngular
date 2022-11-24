@@ -23,14 +23,4 @@ export class MovieComponent implements OnInit {
   ngOnInit(): void {
   };
 
-  // setNewClass(vote: number): string {
-  //   if (vote >= 8) {
-  //     return 'green'
-  //   } else if (vote >= 6) {
-  //     return 'orange'
-  //   } else {
-  //     return 'red'
-  //   }
-  // };
-
 }

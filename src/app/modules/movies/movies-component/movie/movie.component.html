@@ -8,9 +8,8 @@
     <div class="app-movie-inf">
       <div class="app-movie-inf-first">
         <div class="app-movie-inf-title">{{movie.original_title}}</div>
-        <div class="tag">{{movie.vote_average}}</div>
+        <div class="tag" [ngStyle]="{color: movie.vote_average <= 7 ? 'red' : 'green'}">{{movie.vote_average}}</div>
       </div>
-
       <div class="app-movie-inf-second-year">{{movie.release_date}}</div>
     </div>
   </a>
