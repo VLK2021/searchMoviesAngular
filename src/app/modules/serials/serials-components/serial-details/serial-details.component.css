@@ -1,9 +1,9 @@
-.serialDetails{
+.serialDetails {
   color: white;
   background: var(--var-bg-all);
 }
 
-.serialDetails-tittle{
+.serialDetails-tittle {
   text-align: center;
   color: var(--var-header-color);
   font-weight: bold;
@@ -13,7 +13,7 @@
   padding: 1rem;
 }
 
-.serialDetails-block_title_and_info{
+.serialDetails-block_title_and_info {
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -21,39 +21,31 @@
 }
 
 .backgroundFon {
-  height:100%;
+  height: 100%;
   width: 100%;
   background-size: cover;
   opacity: 0.8;
-  /*box-shadow: inset 0 -15rem 15rem black;*/
 }
 
-.serialDetails-img{
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.serialDetails-img {
+  width: 25%;
   padding: 0.5rem;
-  box-sizing: border-box;
   margin-top: 0.5rem;
 }
 
 .serialDetails-img img {
-  width: 20rem;
+  width: 100%;
   max-height: 30rem;
   border-radius: 1rem;
   -webkit-box-shadow: 0.2rem 0.2rem 20px deepskyblue;
 }
 
-.serialDetails-block_title_and_info-block_info{
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  font-size: 1.2rem;
-  font-weight: bold;
+.serialDetails-block_title_and_info-block_info {
+  width: 75%;
 }
 
 
-.serialDetails-overview{
+.serialDetails-overview {
   width: 100%;
   padding: 2rem 0.5rem 2rem 0.5rem;
   font-weight: bold;
@@ -63,4 +55,131 @@
   color: var(--var-color-a);
 }
 
+/*----------seasons-----------------------------------------------------------------------------------------------*/
+.serialDetails-seasons {
+  width: 100%;
+  padding: 2rem 0.5rem 2rem 0.5rem;
+  text-align: center;
+}
 
+.serialDetails-seasons > h4 {
+  font-weight: bold;
+  text-transform: uppercase;
+  color: var(--var-header-color);
+}
+
+ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+ul > div {
+  width: 15%;
+}
+
+li > a {
+  text-decoration: none;
+  color: var(--var-color-a);
+  font-weight: bold;
+  font-style: italic;
+  font-size: 1.2rem;
+}
+
+li > a:hover {
+  color: var(--var-a-hover);
+}
+
+.serialDetails-companies-text {
+  text-align: center;
+  font-weight: bold;
+  font-size: 2rem;
+  color: var(--var-header-color);
+  margin-bottom: 2rem;
+}
+
+
+.serialDetails-companies {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 1rem;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.serialDetails-companies-block {
+  text-align: center;
+  margin-right: 1rem;
+  background: gainsboro;
+  box-shadow: 0 0 0.5rem gainsboro, inset 0 0 0.5rem midnightblue;
+  padding: 0.3rem;
+  box-sizing: border-box;
+  border-radius: 0.5rem;
+  border: 0.01rem solid black;
+  color: midnightblue;
+}
+
+.serialDetails-companies-block-tittle {
+}
+
+.serialDetails-companies-img {
+  width: 8rem;
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0.3rem;
+  border-radius: 0.5rem;
+}
+
+.serialDetails-genres {
+  margin: 2rem 0 0 0;
+  padding: 1rem;
+}
+
+.serialDetails-color-all-first {
+  text-align: center;
+  font-weight: bold;
+  font-size: 2rem;
+  color: var(--var-header-color);
+  margin-bottom: 2rem;
+}
+
+.serialDetails-genres-gen {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 0.4rem;
+}
+
+.serialDetails-genres-block-one {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.9rem;
+  padding: 0.5rem 0.5rem;
+  background: var(--var-bg-header);
+  font-weight: bold;
+  font-size: 1rem;
+  width: 11rem;
+  height: 1.8rem;
+  color: var(--var-header-color);
+}
+
+.homePage {
+  margin: 2rem 0 0 2rem;
+  padding: 5rem 0 5rem 0;
+}
+
+.homePage > a {
+  color: var(--var-color-a);
+  margin-left: 1rem;
+}
+
+.homePage > a:hover {
+  color: var(--var-a-hover);
+}
+
+.serialDetails-info-titles {
+  color: var(--var-header-color);
+  font-size: 1.5rem;
+}

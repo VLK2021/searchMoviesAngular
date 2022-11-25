@@ -1,19 +1,57 @@
 <div class="serialDetails">
-  <h1 class="serialDetails-tittle">{{serialDetails?.original_name}}</h1>
+  <h1 class="serialDetails-tittle">{{serialDetails.original_name}}</h1>
 
   <div class="serialDetails-block_title_and_info backgroundFon"
-        [ngStyle]="{'background-image': 'url('+IMG_URL+serialDetails.backdrop_path+')'}"
-  >
+       [ngStyle]="{'background-image': 'url('+IMG_URL+serialDetails.backdrop_path+')'}">
     <div class="serialDetails-img">
-      <img [src]=IMG_URL+serialDetails?.poster_path alt="No Image Available"/>
+      <img [src]=IMG_URL+serialDetails.poster_path alt="No Image Available"/>
     </div>
 
     <div class="serialDetails-block_title_and_info-block_info">
+      <div class="serialDetails-seasons">
+        <h4>seasons</h4>
+
+        <ul>
+          <div *ngFor="let season of serialDetails.seasons">
+            <li><a href="">{{season.name}}</a></li>
+          </div>
+        </ul>
+      </div>
+
     </div>
+
+
   </div>
 
   <div class="serialDetails-overview">
     {{serialDetails.overview}}
+  </div>
+
+  <div>
+    <div class="serialDetails-companies-text">Production companies:</div>
+    <div class="serialDetails-companies">
+      <div *ngFor="let company of serialDetails.production_companies">
+        <div class="serialDetails-companies-block">
+          <div class="serialDetails-companies-block-tittle">{{company.name}}</div>
+          <div>
+            <img class="serialDetails-companies-img" [src]=IMG_URL+company.logo_path alt="poster">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class='serialDetails-genres'>
+    <div class='serialDetails-color-all-first'>Genres:</div>
+    <div class="serialDetails-genres-gen">
+      <div *ngFor="let value of serialDetails.genres">
+        <div class='serialDetails-genres-block-one'>{{value.name}}</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="homePage"><strong class='serialDetails-info-titles'>Homepage:</strong>
+    <a href="{{serialDetails.homepage}}" target="_blank">{{serialDetails.homepage}}</a>
   </div>
 
 

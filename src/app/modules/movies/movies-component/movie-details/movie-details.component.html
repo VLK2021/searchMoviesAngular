@@ -1,30 +1,30 @@
 <div class="movieDetails">
-  <h1 class='movieDetails-title'>{{movieDetails?.original_title}}</h1>
+  <h1 class='movieDetails-title'>{{movieDetails.original_title}}</h1>
 
   <div class="movieDetails-block_title_and_info">
     <div class="movieDetails-img">
-      <img [src]=IMG_URL+movieDetails?.backdrop_path alt="No Image Available"/>
+      <img [src]=IMG_URL+movieDetails.backdrop_path alt="No Image Available"/>
     </div>
 
     <div class="movieDetails-block_title_and_info-block_info">
-      <div><strong class='movieDetails-info-titles'>Release date:</strong> {{movieDetails?.release_date}}</div>
-      <div><strong class='movieDetails-info-titles'>Budget:</strong> {{movieDetails?.budget}}</div>
-      <div><strong class='movieDetails-info-titles'>Vote average:</strong> {{movieDetails?.vote_average}}</div>
-      <div><strong class='movieDetails-info-titles'>Vote count:</strong> {{movieDetails?.vote_count}}</div>
-      <div><strong class='movieDetails-info-titles'>Revenue:</strong> {{movieDetails?.revenue}}</div>
-      <div><strong class='movieDetails-info-titles'>Popularity:</strong> {{movieDetails?.popularity}}</div>
-      <div><strong class='movieDetails-info-titles'>Original language:</strong> {{movieDetails?.original_language}}
+      <div><strong class='movieDetails-info-titles'>Release date:</strong> {{movieDetails.release_date}}</div>
+      <div><strong class='movieDetails-info-titles'>Budget:</strong> {{movieDetails.budget}}</div>
+      <div><strong class='movieDetails-info-titles'>Vote average:</strong> {{movieDetails.vote_average}}</div>
+      <div><strong class='movieDetails-info-titles'>Vote count:</strong> {{movieDetails.vote_count}}</div>
+      <div><strong class='movieDetails-info-titles'>Revenue:</strong> {{movieDetails.revenue}}</div>
+      <div><strong class='movieDetails-info-titles'>Popularity:</strong> {{movieDetails.popularity}}</div>
+      <div><strong class='movieDetails-info-titles'>Original language:</strong> {{movieDetails.original_language}}
       </div>
     </div>
   </div>
 
-  <h3 class='movieDetails-overview'>{{movieDetails?.overview}}</h3>
+  <h3 class='movieDetails-overview'>{{movieDetails.overview}}</h3>
 
   <div>
     <div class='movieDetails-color-all-first'>Production companies:</div>
 
     <div class="movieDetails-Production_companies">
-      <div *ngFor="let company of movieDetails?.production_companies">
+      <div *ngFor="let company of movieDetails.production_companies">
         <div class="movieDetails-Production_companies-block">
           <div class="movieDetails-Production_companies-block-tittle">{{company.name}}</div>
           <div><img class="movieDetails-Production_companies-img" [src]=IMG_URL+company.logo_path alt="poster"></div>
@@ -37,7 +37,7 @@
     <div class='movieDetails-color-all-first'>Genres:</div>
 
     <div class="movieDetails-genres-gen">
-      <div *ngFor="let value of movieDetails?.genres">
+      <div *ngFor="let value of movieDetails.genres">
         <div class='movieDetails-genres-block-one'>{{value.name}}</div>
       </div>
     </div>
@@ -62,7 +62,7 @@
     </div>
 
     <div class="homePage"><strong class='movieDetails-info-titles'>Homepage:</strong>
-      <a href="{{movieDetails?.homepage}}" target="_blank">{{movieDetails?.homepage}}</a>
+      <a href="{{movieDetails.homepage}}" target="_blank">{{movieDetails.homepage}}</a>
     </div>
   </div>
 

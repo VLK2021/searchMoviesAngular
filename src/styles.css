@@ -5,6 +5,12 @@
   box-sizing: border-box;
 }
 
+li{
+  list-style: none;
+}
+
+
+
 :root{
   --var-bg-header: #787272;
   --var-bg-footer: #787272;
