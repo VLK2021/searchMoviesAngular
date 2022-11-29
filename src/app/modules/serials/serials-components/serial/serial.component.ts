@@ -1,6 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 
-import {ISerial} from "../../../../interfaces/interfaceSerial/ISerial";
+import {ISerial} from "../../../../interfaces";
 import {IMG_URL} from "../../../../constants";
 
 @Component({

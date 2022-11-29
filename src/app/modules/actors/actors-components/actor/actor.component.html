@@ -1,1 +1,15 @@
-<p>actor works!</p>
+<div class="app-actor">
+
+  <a routerLink="{{actor.id}}">
+    <div class="app-actor-img">
+      <img [src]=IMG_URL+actor.profile_path alt="No Image Available">
+    </div>
+
+    <div class="app-actor-inf">
+      <div class="app-actor-inf-title">{{actor.name}}</div>
+
+      <div class="tag" [ngStyle]="{color: actor.popularity <= 100? 'red' : 'green'}">{{actor.popularity}}</div>
+    </div>
+  </a>
+
+</div>

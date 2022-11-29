@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+
 import {IActor} from "../../../../interfaces/interfaceActor/IActor";
 import {ActorService} from "../../actors-services/actor.service";
 
@@ -18,7 +19,29 @@ export class ActorsComponent implements OnInit {
   constructor(private actorService:ActorService) { }
 
   ngOnInit(): void {
-    this.actorService.getAll(this.page).subscribe(value => console.log(value));
+    //@ts-ignore
+    this.actorService.getAll(this.page).subscribe(({page, results, total_pages, total_results}) => {
+      this.actors = results;
+      console.log(results);
+      this.page = page;
+      this.total_pages = total_pages;
+      this.total_results = total_results;
+    });
+  }
+
+  goStartOrEnd(page: number) {
+    this.page = page;
+  }
+
+  goNextOrPrevious(page: number) {
+    this.page += page;
+    //@ts-ignore
+    this.actorService.getAll(this.page).subscribe(({page, results, total_pages, total_results}) => {
+      this.actors = results;
+      this.page = page;
+      this.total_pages = total_pages;
+      this.total_results = total_results;
+    })
   }
 
 }
