@@ -44,3 +44,32 @@
   background: var(--var-header-color);
   color: var(--var-bg-header);
 }
+
+.app-search-actor-input {
+  background: var(--var-bg-all);
+  padding: 2rem 0 2rem 0;
+  text-align: center;
+}
+
+.btn-search {
+  width: 15rem;
+  font-weight: bold;
+  background: var(--var-bg-btn);
+  color: var(--var-color-btn);
+  box-shadow: var(--var-box-shadov-btn);
+  margin-bottom: 3rem;
+  margin-top: 2rem;
+  border-radius: 1rem;
+  padding: 0.3rem;
+}
+
+.app-search-actor-input-block > input {
+  width: 25rem;
+  height: 2rem;
+  border-radius: 1rem;
+  color: var(--var-color-btn);
+  font-weight: bold;
+  box-shadow: var(--var-box-shedow-header);
+  padding: 0 0 0 1rem;
+
+}

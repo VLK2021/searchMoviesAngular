@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {HttpClientModule} from "@angular/common/http";
+import {FormsModule} from "@angular/forms";
 
 import { ActorsComponent } from './actors-components/actors/actors.component';
 import { ActorComponent } from './actors-components/actor/actor.component';
@@ -22,6 +23,7 @@ import { SearchActorComponent } from './actors-components/search-actor/search-ac
     CommonModule,
     ActorsRoutingModule,
     HttpClientModule,
+    FormsModule
   ],
   exports: [
     ActorsComponent,

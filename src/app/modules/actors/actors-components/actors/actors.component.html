@@ -1,6 +1,6 @@
 <div class="app-search-actor-input">
-  <div class="app-search-actor-input-block"><input type="text" placeholder="search..."></div>
-  <button class="btn-search">search</button>
+  <div class="app-search-actor-input-block"><input type="text" [(ngModel)]="word" placeholder="search..."></div>
+  <button (click)="search()" class="btn-search">search</button>
 </div>
 
 
