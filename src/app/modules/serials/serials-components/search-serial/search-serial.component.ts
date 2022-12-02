@@ -1,17 +1,17 @@
 import {Component, OnInit} from '@angular/core';
 
-import {SerialsService} from "../../serials-services";
 import {ISerial} from "../../../../interfaces";
 import {BehaviorSubjectService} from "../../../../BehaviorSubject/behavior-subject.service";
+import {SerialsService} from "../../serials-services";
 
 
 @Component({
-  selector: 'app-serials',
-  templateUrl: './serials.component.html',
-  styleUrls: ['./serials.component.css']
+  selector: 'app-search-serial',
+  templateUrl: './search-serial.component.html',
+  styleUrls: ['./search-serial.component.css']
 })
 
-export class SerialsComponent implements OnInit {
+export class SearchSerialComponent implements OnInit {
   serials: ISerial[];
   word = '';
   page: number = 1;
@@ -20,16 +20,17 @@ export class SerialsComponent implements OnInit {
 
   constructor(private serialService: SerialsService,
               private behaviorSubjectService: BehaviorSubjectService) {
+    behaviorSubjectService.storage.subscribe(value => this.word = value);
   }
 
   ngOnInit(): void {
     //@ts-ignore
-    this.serialService.getAll(this.page).subscribe(({page, results, total_pages, total_results}) => {
+    this.serialService.getSearch(this.word, this.page).subscribe(({page, results, total_pages, total_results}) => {
       this.serials = results;
       this.page = page;
       this.total_pages = total_pages;
       this.total_results = total_results;
-    })
+    });
   }
 
   goStartOrEnd(page: number) {
@@ -39,15 +40,13 @@ export class SerialsComponent implements OnInit {
   goNextOrPrevious(page: number) {
     this.page += page;
     //@ts-ignore
-    this.serialService.getAll(this.page).subscribe(({page, results, total_pages, total_results}) => {
+    this.serialService.getSearch(this.word, this.page).subscribe(({page, results, total_pages, total_results}) => {
       this.serials = results;
       this.page = page;
       this.total_pages = total_pages;
       this.total_results = total_results;
-    })
+    });
+
   }
 
-  search() {
-    this.behaviorSubjectService.storage.next(this.word);
-  }
 }

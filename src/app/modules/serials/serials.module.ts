@@ -7,18 +7,22 @@ import { SerialComponent } from './serials-components/serial/serial.component';
 import { SerialDetailsComponent } from './serials-components/serial-details/serial-details.component';
 import {SerialsRoutingModule} from "./serials-routing.module";
 import {SerialsService} from "./serials-services";
+import { SearchSerialComponent } from './serials-components/search-serial/search-serial.component';
+import {FormsModule} from "@angular/forms";
 
 
 @NgModule({
   declarations: [
     SerialsComponent,
     SerialComponent,
-    SerialDetailsComponent
+    SerialDetailsComponent,
+    SearchSerialComponent
   ],
   imports: [
     CommonModule,
     HttpClientModule,
-    SerialsRoutingModule
+    SerialsRoutingModule,
+    FormsModule
   ],
   exports: [
     SerialsComponent

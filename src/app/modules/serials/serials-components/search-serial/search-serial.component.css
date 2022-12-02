@@ -1,19 +1,19 @@
-.app-serials{
+.app-search-serial {
   width: 100%;
   background: var(--var-bg-all);
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
   align-items: center;
-  justify-content:space-evenly;
+  justify-content: space-evenly;
 }
 
-.app-serials-block{
-  width: 22%;
+.app-search-serial-block {
+  width: 20%;
   padding: 0.5rem;
 }
 
-.pagination{
+.pagination {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -23,7 +23,7 @@
   padding: 2rem 0 2rem 0;
 }
 
-.btn{
+.btn {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -39,37 +39,8 @@
   box-shadow: var(--var-box-shadov-btn);
 }
 
-.size{
+.size {
   font-size: 2rem;
   background: var(--var-header-color);
   color: var(--var-bg-header);
-}
-
-.app-search-serial-input {
-  background: var(--var-bg-all);
-  padding: 2rem 0 2rem 0;
-  text-align: center;
-}
-
-.app-search-serial-input-block > input {
-  width: 25rem;
-  height: 2rem;
-  border-radius: 1rem;
-  color: var(--var-color-btn);
-  font-weight: bold;
-  box-shadow: var(--var-box-shedow-header);
-  padding: 0 0 0 1rem;
-
-}
-
-.btn-search {
-  width: 15rem;
-  font-weight: bold;
-  background: var(--var-bg-btn);
-  color: var(--var-color-btn);
-  box-shadow: var(--var-box-shadov-btn);
-  margin-bottom: 3rem;
-  margin-top: 2rem;
-  border-radius: 1rem;
-  padding: 0.3rem;
 }
