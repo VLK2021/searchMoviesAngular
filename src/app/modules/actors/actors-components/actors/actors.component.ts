@@ -50,4 +50,12 @@ export class ActorsComponent implements OnInit {
   search(): void {
     this.behaviorSubjectService.storage.next(this.word);
   }
+
+  sortByName() {
+    this.actors = this.actors.slice().sort((a, b) => a.name > b.name ? 1 : -1);
+  }
+
+  sortByPopularity() {
+    this.actors = this.actors.slice().sort((a, b) => b.popularity - a.popularity);
+  }
 }

@@ -1,9 +1,13 @@
-<div class="app-search-actor-input">
-  <div class="app-search-actor-input-block"><input type="text" [(ngModel)]="word" placeholder="search..."></div>
-  <button (click)="search()"
-          class="btn-search"
-          routerLink="/actor/search"
-  >search</button>
+<div class="search-sort-actors">
+  <div class="actors-sort"> sort by:
+    <button (click)="sortByName()" class="btn-search">name</button>
+    <button (click)="sortByPopularity()" class="btn-search">popular</button>
+  </div>
+
+  <div class="app-search-actor-input">
+    <div class="app-search-actor-input-block"><input type="text" [(ngModel)]="word" placeholder="search..."></div>
+    <button (click)="search()" class="btn-search" routerLink="/actor/search">search</button>
+  </div>
 </div>
 
 
