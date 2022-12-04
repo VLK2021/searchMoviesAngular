@@ -1,5 +1,14 @@
-<div class="sort-movies">
-  <button (click)="sortByVoteAverage()">sortAverage</button>
+<div class="search-sort-movies">
+  <div class="movies-sort"> sort by:
+    <button (click)="sortByName()" class="btn-search">name</button>
+    <button (click)="sortByDate()" class="btn-search">date</button>
+    <button (click)="sortByVoteAverage()" class="btn-search">average</button>
+  </div>
+
+  <div class="app-search-movies-input">
+    <div class="app-search-movies-input-block"><input type="text" [(ngModel)]="word" placeholder="search..."></div>
+    <button (click)="search()" class="btn-search" routerLink="/movies/search">search</button>
+  </div>
 </div>
 
 <div class="app-movies">

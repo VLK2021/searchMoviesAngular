@@ -3,6 +3,7 @@ import {Component, OnInit} from '@angular/core';
 import {IMovie} from "../../../../interfaces";
 import {MoviesService} from "../../movie-services";
 import {IMG_URL} from "../../../../constants";
+import {BehaviorSubjectService} from "../../../../BehaviorSubject/behavior-subject.service";
 
 
 @Component({
@@ -19,15 +20,13 @@ export class SearchMoviesComponent implements OnInit {
   total_results: number;
   IMG_URL: string = IMG_URL;
 
-  constructor(private movieService: MoviesService) {
+  constructor(private movieService: MoviesService,
+              private behaviorSubjectService: BehaviorSubjectService) {
+    behaviorSubjectService.storage.subscribe(value => this.word = value);
   }
 
   ngOnInit(): void {
-
-  }
-
-  search(): void {
-    //@ts-ignore
+//@ts-ignore
     this.movieService.getSearch(this.word, this.page).subscribe(({page, results, total_pages, total_results}) => {
       this.movies = results;
       this.page = page;
@@ -42,7 +41,7 @@ export class SearchMoviesComponent implements OnInit {
 
   goNextOrPrevious(page: number) {
     this.page += page;
-//@ts-ignore
+    //@ts-ignore
     this.movieService.getSearch(this.word, this.page).subscribe(({page, results, total_pages, total_results}) => {
       this.movies = results;
       this.page = page;

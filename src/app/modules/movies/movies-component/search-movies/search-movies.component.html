@@ -1,9 +1,4 @@
 <div class="app-search-movies">
-  <div class="app-search-movies-input">
-    <div class="app-search-movies-input-block"><input type="text" [(ngModel)]="word" placeholder="search..."></div>
-    <button (click)="search()" class="btn-search">search</button>
-  </div>
-
   <div class="app-search-movies-block">
     <app-movie *ngFor="let movie of movies" [movie]="movie" class="app-movies-block"></app-movie>
   </div>
