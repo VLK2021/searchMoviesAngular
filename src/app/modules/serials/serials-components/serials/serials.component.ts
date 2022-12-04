@@ -61,6 +61,6 @@ export class SerialsComponent implements OnInit {
   }
 
   sortByName() {
-    this.serials = this.serials.slice().sort((a, b) => a.name > b.name ? 1 : -1);
+    this.serials = this.serials.slice().sort((a, b) => a.original_name > b.original_name ? 1 : -1);
   }
 }
