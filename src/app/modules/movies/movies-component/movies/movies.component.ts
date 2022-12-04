@@ -25,7 +25,7 @@ export class MoviesComponent implements OnInit {
     this.movieService.getAll(this.page).subscribe(({page, results, total_pages, total_results}) => {
       this.movies = results;
       this.page = page;
-      // this.total_pages = total_pages;
+      this.total_pages = total_pages;
       this.total_results = total_results;
     })
   }
@@ -41,8 +41,12 @@ export class MoviesComponent implements OnInit {
     this.movieService.getAll(this.page).subscribe(({page, results, total_pages, total_results}) => {
       this.movies = results;
       this.page = page;
-      // this.total_pages = total_pages;
+      this.total_pages = total_pages;
       this.total_results = total_results;
-    })
+    });
+  }
+
+  sortByVoteAverage(){
+    this.movies = this.movies.slice().sort((a,b)=>b.vote_average - a.vote_average);
   }
 }

@@ -1,9 +1,14 @@
-<div class="app-search-serial-input">
-  <div class="app-search-serial-input-block"><input type="text" [(ngModel)]="word" placeholder="search..."></div>
-  <button (click)="search()"
-          class="btn-search"
-          routerLink="/serials/search"
-  >search</button>
+<div class="search-sort-serials">
+  <div class="serials-sort"> sort by:
+    <button (click)="sortByAverage()" class="btn-search">average</button>
+    <button (click)="sortByDate()" class="btn-search">date</button>
+    <button (click)="sortByName()" class="btn-search">name</button>
+  </div>
+
+  <div class="app-search-serial-input">
+    <div class="app-search-serial-input-block"><input type="text" [(ngModel)]="word" placeholder="search..."></div>
+    <button (click)="search()" class="btn-search" routerLink="/serials/search">search</button>
+  </div>
 </div>
 
 

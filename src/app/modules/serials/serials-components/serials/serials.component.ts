@@ -29,12 +29,12 @@ export class SerialsComponent implements OnInit {
       this.page = page;
       this.total_pages = total_pages;
       this.total_results = total_results;
-    })
-  }
+    });
+  };
 
   goStartOrEnd(page: number) {
     this.page = page;
-  }
+  };
 
   goNextOrPrevious(page: number) {
     this.page += page;
@@ -44,10 +44,23 @@ export class SerialsComponent implements OnInit {
       this.page = page;
       this.total_pages = total_pages;
       this.total_results = total_results;
-    })
-  }
+    });
+  };
 
   search() {
     this.behaviorSubjectService.storage.next(this.word);
+  };
+
+  sortByAverage() {
+    this.serials = this.serials.slice().sort((a,b)=>b.vote_average - a.vote_average);
+  };
+
+
+  sortByDate() {
+    this.serials = this.serials.slice().sort((a, b) => b.first_air_date> a.first_air_date ? 1 : -1);
+  }
+
+  sortByName() {
+    this.serials = this.serials.slice().sort((a, b) => a.name > b.name ? 1 : -1);
   }
 }
