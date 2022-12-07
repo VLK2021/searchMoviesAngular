@@ -18,7 +18,6 @@ export class CarouselComponent implements OnInit {
   slidePosition: number = 0;
 
   slides: any = document.getElementsByClassName('carousel_item');
-  totalSlides = this.slides.length;
 
 
   constructor(private movieService: MoviesService) {
@@ -55,7 +54,7 @@ export class CarouselComponent implements OnInit {
 
   prevSlide() {
     if (this.slidePosition === 0){
-      this.slidePosition = 0;
+      this.slidePosition = this.slides.length - 1;
     } else {
       this.slidePosition--;
     }

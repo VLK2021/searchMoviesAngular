@@ -58,6 +58,10 @@
   display: none;
 }
 
+.carousel_item{
+  position: relative;
+}
+
 .carousel .carousel_item img {
   width: 95vw;
   padding: 0 5%;
@@ -89,3 +93,16 @@
 }
 
 
+.first {
+  position: absolute;
+  top: 90%;
+  left: 40%;
+}
+
+.first button{
+  background-color: #5c0080;
+  width: 120px;
+  height: 40px;
+  border-radius: 1em;
+  border: none;
+}
