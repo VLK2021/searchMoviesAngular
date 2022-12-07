@@ -36,19 +36,21 @@ export class CarouselComponent implements OnInit {
 
   updateSlidePosition() {
     for (let slide of this.slides) {
-      slide.classList.remove('carousel_item-visible')
+      slide.classList.remove('carousel_item-visible');
+      slide.classList.add('carousel_item-hidden');
     }
+
+    this.slides[this.slidePosition].classList.add('carousel_item-visible');
   }
 
 
   nextSlide() {
-    this.updateSlidePosition()
-
-    if (this.slidePosition === this.slides.length){
+    if (this.slidePosition === this.slides.length - 1){
       this.slidePosition = 0;
     } else {
       this.slidePosition++;
     }
+    this.updateSlidePosition()
   }
 
   prevSlide() {
@@ -57,5 +59,7 @@ export class CarouselComponent implements OnInit {
     } else {
       this.slidePosition--;
     }
+    this.updateSlidePosition()
   }
+
 }
