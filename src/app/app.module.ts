@@ -7,6 +7,9 @@ import { FooterComponent } from './app-components/footer/footer.component';
 import {AppRoutingModule} from "./app-routing.module";
 import { NavigationComponent } from './app-components/navigation/navigation.component';
 import {FormsModule} from "@angular/forms";
+import { HomeComponent } from './app-components/home/home.component';
+import { CarouselComponent } from './app-components/carousel/carousel.component';
+import {HttpClientModule} from "@angular/common/http";
 
 
 @NgModule({
@@ -15,11 +18,13 @@ import {FormsModule} from "@angular/forms";
     HeaderComponent,
     FooterComponent,
     NavigationComponent,
+    HomeComponent,
+    CarouselComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

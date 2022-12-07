@@ -21,7 +21,7 @@ export class MoviesComponent implements OnInit {
 
   constructor(private movieService: MoviesService,
               private behaviorSubjectService: BehaviorSubjectService) {
-  }
+  };
 
   ngOnInit(): void {
     //@ts-ignore
@@ -30,12 +30,12 @@ export class MoviesComponent implements OnInit {
       this.page = page;
       this.total_pages = total_pages;
       this.total_results = total_results;
-    })
-  }
+    });
+  };
 
   goStartOrEnd(page: number) {
     this.page = page;
-  }
+  };
 
   goNextOrPrevious(page: number) {
     this.page += page;
@@ -46,21 +46,23 @@ export class MoviesComponent implements OnInit {
       this.total_pages = total_pages;
       this.total_results = total_results;
     });
-  }
+  };
 
   search(): void {
     this.behaviorSubjectService.storage.next(this.word);
-  }
+  };
 
   sortByVoteAverage() {
     this.movies = this.movies.slice().sort((a, b) => b.vote_average - a.vote_average);
-  }
+  };
 
   sortByName() {
     this.movies = this.movies.slice().sort((a, b) => a.title > b.title ? 1 : -1);
-  }
+  };
 
   sortByDate() {
-    this.movies = this.movies.slice().sort((a, b) => a.release_date > b.release_date ? 1 : -1);
-  }
+    this.movies = this.movies.slice().sort((a, b) => b.release_date > a.release_date ? 1 : -1);
+  };
+
+
 }
