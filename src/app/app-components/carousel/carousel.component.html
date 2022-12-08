@@ -1,68 +1,34 @@
-<!--<div class="carousel__movie">-->
-
-<!--  <div *ngIf="movies.length" class="carousel__movie-absolute">-->
-<!--    <div id="carousel__movie-absolute-h1">-->
-<!--      <h1>{{movies[0].title}}</h1>-->
-<!--    </div>-->
-<!--    <div id="carousel__movie-absolute-p">-->
-<!--      <p>{{movies[0].overview}}</p>-->
-<!--      <div id="carousel__routing">-->
-<!--        <a [routerLink]="['/movies', movies[0].id]"><button>MORE INFO</button></a>-->
-<!--      </div>-->
-<!--    </div>-->
-<!--  </div>-->
-
-<!--  <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">-->
-<!--    <div class="carousel-indicators">-->
-<!--      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>-->
-<!--      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>-->
-<!--      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>-->
-<!--    </div>-->
-<!--    <div class="carousel-inner">-->
-<!--      <div class="carousel-item active">-->
-<!--        <img *ngIf="movies.length" [src]=IMG_URL+movies[0].poster_path class="carousel__movie-size" alt="w">-->
-<!--      </div>-->
-<!--      <div class="carousel-item">-->
-<!--        <img *ngIf="movies.length" [src]=IMG_URL+movies[1].poster_path class="carousel__movie-size" alt="w">-->
-<!--      </div>-->
-<!--      <div class="carousel-item">-->
-<!--        <img *ngIf="movies.length" [src]=IMG_URL+movies[2].poster_path class="carousel__movie-size" alt="w">-->
-<!--      </div>-->
-<!--    </div>-->
-<!--    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">-->
-<!--      <span class="carousel-control-prev-icon" aria-hidden="true"></span>-->
-<!--      <span class="visually-hidden">Previous</span>-->
-<!--    </button>-->
-<!--    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">-->
-<!--      <span class="carousel-control-next-icon" aria-hidden="true"></span>-->
-<!--      <span class="visually-hidden">Next</span>-->
-<!--    </button>-->
-<!--  </div>-->
-
-<!--</div>-->
-
-
 <div class="carousel">
-
-
-
-
 
   <div class="carousel_item carousel_item-visible">
     <img *ngIf="movies.length" [src]=IMG_URL+movies[0].poster_path alt="w">
-          <div class="first">
-            <a [routerLink]="['/movies', movies[0].id]"><button>MORE INFO</button></a>
-          </div>
+    <div class="linkToInfo">
+      <a [routerLink]="['/movies', movies[0].id]">
+        <button>MORE INFO</button>
+      </a>
+    </div>
   </div>
+
   <div class="carousel_item">
     <img *ngIf="movies.length" [src]=IMG_URL+movies[1].poster_path alt="w">
+    <div class="linkToInfo">
+      <a [routerLink]="['/movies', movies[1].id]">
+        <button>MORE INFO</button>
+      </a>
+    </div>
   </div>
+
   <div class="carousel_item">
     <img *ngIf="movies.length" [src]=IMG_URL+movies[2].poster_path alt="w">
+    <div class="linkToInfo">
+      <a [routerLink]="['/movies', movies[2].id]">
+        <button>MORE INFO</button>
+      </a>
+    </div>
   </div>
 
   <div class="carousel_actions">
-    <button id="carousel_button-prev" aria-label="Previous slide" (click)="prevSlide()"><</button>
-    <button id="carousel_button-next" aria-label="Next slide" (click)="nextSlide()">></button>
+    <button id="carousel_button-prev" class="sizeArrow" aria-label="Previous slide" (click)="prevSlide()"><</button>
+    <button id="carousel_button-next" class="sizeArrow" aria-label="Next slide" (click)="nextSlide()">></button>
   </div>
 </div>

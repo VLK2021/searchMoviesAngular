@@ -1,5 +1,38 @@
 .app-home {
   width: 100%;
   min-height: 70vh;
-  color: red;
+  background: var(--var-bg-all);
+}
+
+.app-home-movies {
+
+}
+
+.app-home-movies h3{
+  width: 100%;
+  color: var(--var-header-color);
+  text-align: center;
+  text-transform: uppercase;
+  padding: 1rem;
+  margin: 3rem 0 1rem 0;
+}
+
+img{
+  width: 9.5rem;
+  margin-left: 0.4rem;
+}
+
+img:hover{
+  position: relative;
+  bottom: 0.5rem;
+}
+
+.app-home-movies-block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app-home-movies-block:hover{
+  border-bottom: 0.3rem solid #b60000;
 }

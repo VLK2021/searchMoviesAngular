@@ -1,57 +1,9 @@
-.carousel__movie-size {
-  width: 95vw;
-  padding: 0 5%;
-  height: 80vh;
-  border-radius: 8%;
-}
-
-.carousel__movie {
-  display: flex;
-  justify-content: center;
-  color: white;
-}
-
-.carousel__movie-absolute {
-  bottom: 120px;
-  left: 170px;
-  position: absolute;
-  z-index: 1;
-  gap: 20px;
-  display: flex;
-  flex-direction: column;
-}
-
-#carousel__movie-absolute-h1 {
-  width: 650px;
-}
-
-#carousel__movie-absolute-p {
-  width: 470px;
-}
-
-#carousel__routing {
-  display: flex;
-  justify-content: center;
-}
-
-#carousel__routing button {
-  background-color: #5c0080;
-  width: 120px;
-  height: 40px;
-  border-radius: 1em;
-  border: none;
-}
-
-#carousel__routing button:hover {
-  background-color: #46015d;
-}
-
-/*----------------------------------------------------------------------------------------*/
 .carousel {
   overflow: hidden;
   width: 100%;
   padding: 1rem;
   position: relative;
+  text-align: center;
 }
 
 .carousel .carousel_item, .carousel .carousel_item-hidden {
@@ -64,9 +16,9 @@
 
 .carousel .carousel_item img {
   width: 95vw;
-  padding: 0 5%;
   height: 80vh;
-  border-radius: 8%;
+  border-radius: 1rem;
+  box-shadow: var(--var-box-shedow-header);
 }
 
 .carousel .carousel_item-visible{
@@ -93,16 +45,37 @@
 }
 
 
-.first {
+.linkToInfo {
   position: absolute;
   top: 90%;
   left: 40%;
 }
 
-.first button{
-  background-color: #5c0080;
-  width: 120px;
-  height: 40px;
-  border-radius: 1em;
-  border: none;
+.linkToInfo button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1rem;
+  /*border: none;*/
+  padding: 0.5rem 0.5rem;
+  background: var(--var-bg-header);
+  font-weight: bold;
+  font-size: 1rem;
+  width: 9rem;
+  height: 2rem;
+  color: var(--var-header-color);
+  cursor: pointer;
+}
+
+.sizeArrow {
+  width: 3rem;
+  border-radius: 1.7rem;
+  background: var(--var-bg-header);
+  color: var(--var-header-color);
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.sizeArrow:hover {
+  color: var(--var-a-hover)
 }

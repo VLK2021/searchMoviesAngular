@@ -1,3 +1,14 @@
 <div class="app-home">
   <app-carousel></app-carousel>
+
+  <div class="app-home-movies">
+    <h3>all movies</h3>
+    <div class="app-home-movies-block">
+      <div *ngFor="let movie of movies.slice(0, 9)">
+        <a [routerLink]="['/movies', movie.id]">
+          <img *ngIf="movies" [src]=IMG_URL+movie.poster_path alt="w">
+        </a>
+      </div>
+    </div>
+  </div>
 </div>
