@@ -22,4 +22,15 @@
       </div>
     </div>
   </div>
+
+  <div class="app-home-actors">
+    <h3>all actors</h3>
+    <div class="app-home-actors-block">
+      <div *ngFor="let actor of actors.slice(0, 9)">
+        <a [routerLink]="['/actor', actor.id]">
+          <img *ngIf="movies" [src]=IMG_URL+actor.profile_path alt="w">
+        </a>
+      </div>
+    </div>
+  </div>
 </div>

@@ -4,36 +4,37 @@
   background: var(--var-bg-all);
 }
 
-.app-home-movies, .app-home-serials {
-
+.app-home-movies, .app-home-serials, .app-home-actors {
+  padding-bottom: 2rem;
 }
 
-.app-home-movies h3, .app-home-serials h3{
+.app-home-movies h3, .app-home-serials h3, .app-home-actors h3 {
   width: 100%;
   color: var(--var-header-color);
   text-align: center;
   text-transform: uppercase;
   padding: 1rem;
   margin: 3rem 0 1rem 0;
+  text-shadow: var(--var-box-shedow-header);
 }
 
-img{
+img {
   width: 9.5rem;
   margin-left: 0.4rem;
 }
 
-img:hover{
+img:hover {
   position: relative;
   bottom: 0.5rem;
 }
 
-.app-home-movies-block, .app-home-serials-block {
+.app-home-movies-block, .app-home-serials-block, .app-home-actors-block {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.app-home-movies-block:hover, .app-home-serials-block:hover{
+.app-home-movies-block:hover, .app-home-serials-block:hover, .app-home-actors-block:hover {
   border-bottom: 0.3rem solid deepskyblue;
 }
 

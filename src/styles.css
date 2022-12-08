@@ -9,7 +9,9 @@ li{
   list-style: none;
 }
 
-
+a{
+  text-decoration: none;
+}
 
 :root{
   --var-bg-header: #787272;
