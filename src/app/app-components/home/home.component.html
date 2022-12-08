@@ -11,4 +11,15 @@
       </div>
     </div>
   </div>
+
+  <div class="app-home-serials">
+    <h3>all serials</h3>
+    <div class="app-home-serials-block">
+      <div *ngFor="let serial of serials.slice(0, 9)">
+        <a [routerLink]="['/serials', serial.id]">
+          <img *ngIf="movies" [src]=IMG_URL+serial.poster_path alt="w">
+        </a>
+      </div>
+    </div>
+  </div>
 </div>

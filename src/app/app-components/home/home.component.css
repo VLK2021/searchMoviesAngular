@@ -4,11 +4,11 @@
   background: var(--var-bg-all);
 }
 
-.app-home-movies {
+.app-home-movies, .app-home-serials {
 
 }
 
-.app-home-movies h3{
+.app-home-movies h3, .app-home-serials h3{
   width: 100%;
   color: var(--var-header-color);
   text-align: center;
@@ -27,12 +27,16 @@ img:hover{
   bottom: 0.5rem;
 }
 
-.app-home-movies-block {
+.app-home-movies-block, .app-home-serials-block {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.app-home-movies-block:hover{
-  border-bottom: 0.3rem solid #b60000;
+.app-home-movies-block:hover, .app-home-serials-block:hover{
+  border-bottom: 0.3rem solid deepskyblue;
 }
+
+
+
+
