@@ -11,6 +11,7 @@ let routes:Routes = [
   {path:'movies', loadChildren:() => import('./modules/movies/movies.module').then(m=>m.MoviesModule)},
   {path:'serials', loadChildren:() => import('./modules/serials/serials.module').then(m=>m.SerialsModule)},
   {path:'actor', loadChildren:() => import('./modules/actors/actors.module').then(m=>m.ActorsModule)},
+  {path:'genres', loadChildren:() => import('./modules/genres/genres.module').then(m=>m.GenresModule)},
   {path:'**', component:NotFoundComponent},
 ];
 
