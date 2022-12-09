@@ -1,0 +1,16 @@
+.app-not-found {
+ width: 100%;
+  min-height: 100vh;
+  background: var(--var-bg-all);
+  position: relative;
+}
+
+h1{
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--var-header-color);
+  text-align: center;
+  text-transform: uppercase;
+}

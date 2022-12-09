@@ -10,6 +10,7 @@ import {FormsModule} from "@angular/forms";
 import { HomeComponent } from './app-components/home/home.component';
 import { CarouselComponent } from './app-components/carousel/carousel.component';
 import {HttpClientModule} from "@angular/common/http";
+import { NotFoundComponent } from './app-components/not-found/not-found.component';
 
 
 @NgModule({
@@ -20,6 +21,7 @@ import {HttpClientModule} from "@angular/common/http";
     NavigationComponent,
     HomeComponent,
     CarouselComponent,
+    NotFoundComponent,
   ],
   imports: [
     BrowserModule,
