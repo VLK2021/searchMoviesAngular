@@ -1,1 +1,9 @@
-<p>genres works!</p>
+<div class="app-genres">
+  <div class="app-genres-genre-block">
+    <app-genre *ngFor="let genreMovie of genresMovie" [genreMovie]="genreMovie"></app-genre>
+  </div>
+
+  <div class="routerOutlet">
+    <router-outlet></router-outlet>
+  </div>
+</div>

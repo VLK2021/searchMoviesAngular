@@ -14,3 +14,4 @@ export * from './interfaceSerial/ICompanieSerial';
 export * from './interfaceSerial/ICountriesSerial';
 export * from './interfaceSerial/ISeason';
 export * from './interfaceActor/IActor';
+export * from './interfaceGenre/IGenre';

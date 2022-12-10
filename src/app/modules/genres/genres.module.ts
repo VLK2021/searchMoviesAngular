@@ -3,12 +3,16 @@ import { CommonModule } from '@angular/common';
 import { GenresComponent } from './genres-components/genres/genres.component';
 import {GenresRoutingModule} from "./genres-routing.module";
 import {HttpClientModule} from "@angular/common/http";
+import { GenreComponent } from './genres-components/genre/genre.component';
+import { GenresMoviesListComponent } from './genres-components/genres-movies-list/genres-movies-list.component';
 
 
 
 @NgModule({
   declarations: [
-    GenresComponent
+    GenresComponent,
+    GenreComponent,
+    GenresMoviesListComponent
   ],
   imports: [
     CommonModule,

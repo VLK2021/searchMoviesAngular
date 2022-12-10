@@ -1,0 +1,22 @@
+.app-genre {
+  width: 14rem;
+  height: 3rem;
+  background: var(--var-bg-header);
+  border: 0.1rem solid black;
+  border-radius: 1.5rem;
+  padding: 0.4rem 0 0.4rem 1rem;
+  box-sizing: border-box;
+  margin-bottom: 3.5rem;
+  margin-left: 1rem;
+  box-shadow: var(--var-box-shedow-header);
+}
+
+.app-genre a{
+  color: var(--var-header-color);
+}
+
+.app-genre a:hover {
+  color: var(--var-a-hover);
+}
+
+
