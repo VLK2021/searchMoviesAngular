@@ -1,0 +1,78 @@
+.app-genre-movie-list {
+  width: 100%;
+  height: 30rem;
+  background: gainsboro;
+  border: 1px solid gray;
+  border-radius: 0.5rem;
+  box-shadow: var(--var-box-shedow-header);
+}
+
+.app-genre-movie-list-img {
+  width: 100%;
+  height: 75%;
+  text-align: center;
+  font-size: 0;
+}
+
+.app-genre-movie-list-img > img {
+  width: 100%;
+  height: 100%;
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.app-genre-movie-list-inf{
+  width: 100%;
+  height: 25%;
+  background: var(--var-bg-header);
+  border-radius: 0 0 0.5rem 0.5rem ;
+  padding: 0.3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.app-genre-movie-list-inf-first{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.app-genre-movie-list-inf-title{
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--var-header-color);
+}
+
+.tag {
+  background: #3e3e3e;
+  padding: 0.4rem;
+  box-sizing: border-box;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: gray;
+  border-radius: 0.3rem;
+}
+
+.tag.green {
+  color: green;
+}
+
+.tag.red {
+  color: red;
+}
+
+
+.app-genre-movie-list-inf-second-year{
+  width: 100%;
+  background: var(--var-bg-header);
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.5rem;
+  padding: 0.3rem;
+  color: var(--var-header-color);
+}
+
+a{
+  text-decoration: none;
+}
+

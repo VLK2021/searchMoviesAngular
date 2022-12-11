@@ -1,3 +1,48 @@
-p{
-  color: red;
+.app-genres-movies-list {
+  width: 100%;
+  background: var(--var-bg-all);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: space-evenly;
 }
+
+.app-genres-movies-list-block {
+  width: 22%;
+  padding: 0.5rem;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--var-bg-all);
+  text-align: center;
+  color: white;
+  padding: 2rem 0 2rem 0;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2.5rem;
+  padding: 0.2rem 0.2rem;
+  margin-right: 2rem;
+  background: var(--var-bg-header);
+  font-weight: bold;
+  font-size: 1.3rem;
+  width: 5rem;
+  height: 5rem;
+  color: var(--var-header-color);
+  box-shadow: var(--var-box-shadov-btn);
+}
+
+.size {
+  font-size: 2rem;
+  background: var(--var-header-color);
+  color: var(--var-bg-header);
+}
+
+

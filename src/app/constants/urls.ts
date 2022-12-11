@@ -19,6 +19,6 @@ export const urls = {
   trailers: (id: number) => `${baseURL}/movie/${id}/videos?api_key=${MY_KEY_API}&language=en-US`,
 
   genresMovies: `${baseURL}/genre/movie/list?api_key=${MY_KEY_API}`,
-  genresMoviesById: (id: number, page:number) => `/discover/movie?&language=uk-UK&api_key=${MY_KEY_API}&with_genres=${id}&page=${page}`,
+  genresMoviesById: (id: number, page: number) => `${baseURL}/discover/movie?&language=uk-UK&api_key=${MY_KEY_API}&with_genres=${id}&page=${page}`,
 }
 

@@ -1,1 +1,21 @@
-<p>genres-movies-list works!</p>
+<div class="app-genres-movies-list">
+  <app-genre-movie-list *ngFor="let genreMovie of genresMovie" [genreMovie]="genreMovie"
+                        class="app-genres-movies-list-block"></app-genre-movie-list>
+</div>
+
+<div class="pagination">
+  <ng-container *ngIf="page > 1">
+    <button class="btn" (click)="goStartOrEnd(1)">{{ 1 }}</button>
+    <button class="btn" (click)="goNextOrPrevious(-1)">{{page - 1}} <<</button>
+  </ng-container>
+
+  <button class="btn size" disabled>{{page}}</button>
+
+  <ng-container *ngIf="page < total_pages">
+    <button class="btn" (click)="goNextOrPrevious(1)"> >> {{ page + 1}}</button>
+  </ng-container>
+
+  <ng-container *ngIf="page !== total_pages">
+    <button class="btn" (click)="goStartOrEnd(total_pages)">{{ total_pages }}</button>
+  </ng-container>
+</div>

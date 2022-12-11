@@ -24,9 +24,10 @@ import {FormsModule} from "@angular/forms";
     HttpClientModule,
     FormsModule
   ],
-  exports: [
-    MoviesComponent,
-  ],
+    exports: [
+        MoviesComponent,
+        MovieComponent,
+    ],
   providers: [
     MoviesService,
   ]

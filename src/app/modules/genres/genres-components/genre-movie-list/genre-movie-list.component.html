@@ -1,0 +1,19 @@
+<div class="app-genre-movie-list">
+
+  <a routerLink="{{genreMovie.id}}">
+    <div class="app-genre-movie-list-img">
+      <img [src]=IMG_URL+genreMovie.poster_path alt="No Image Available">
+    </div>
+
+    <div class="app-genre-movie-list-inf">
+      <div class="app-genre-movie-list-inf-first">
+        <div class="app-genre-movie-list-inf-title">{{genreMovie.original_title}}</div>
+        <div class="tag"
+             [ngStyle]="{color: genreMovie.vote_average <= 7 ? 'red' : 'green'}">{{genreMovie.vote_average}}</div>
+      </div>
+      <div class="app-genre-movie-list-inf-second-year">{{genreMovie.release_date}}</div>
+    </div>
+  </a>
+
+</div>
+
