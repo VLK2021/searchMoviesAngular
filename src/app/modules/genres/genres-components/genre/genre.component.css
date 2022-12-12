@@ -19,4 +19,9 @@
   color: var(--var-a-hover);
 }
 
-
+.active {
+  color:  var(--var-a-hover);
+  font-weight: bold;
+  cursor: default;
+  opacity: 1;
+}

@@ -1,3 +1,9 @@
+/*.app-navigation {*/
+/*  width: 100%;*/
+/*  position: fixed;*/
+/*  z-index: 100;*/
+/*}*/
+
 ul{
   display: flex;
   justify-content: space-around;
@@ -7,7 +13,7 @@ ul{
   padding: 2rem 0 2rem 0;
 }
 
-ul > li > a{
+a{
   color: var(--var-header-color);
   list-style: none;
   text-transform: uppercase;
@@ -17,6 +23,13 @@ ul > li > a{
 
 li{
   list-style: none;
+}
+
+.active {
+  color:  var(--var-a-hover);
+  font-weight: bold;
+  cursor: default;
+  opacity: 1;
 }
 
 

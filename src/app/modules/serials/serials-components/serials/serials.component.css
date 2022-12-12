@@ -91,3 +91,19 @@
   padding: 0.2rem;
 }
 
+.search-sort-serials-genres {
+  color: var(--var-color-btn);
+  font-weight: bold;
+  text-transform: uppercase;
+
+}
+
+/*a{*/
+/*  color: var(--var-header-color);*/
+/*  list-style: none;*/
+/*  text-transform: uppercase;*/
+/*  font-weight: bold;*/
+/*  text-decoration: none;*/
+/*}*/
+
+
