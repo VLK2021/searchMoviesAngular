@@ -1,0 +1,16 @@
+<div class="app-genre-of-serials-list">
+  <a routerLink="{{genreOfSerials.id}}">
+    <div class="app-genre-of-serials-list-img">
+      <img [src]=IMG_URL+genreOfSerials.poster_path alt="No Image Available">
+    </div>
+
+    <div class="app-genre-of-serials-list-inf">
+      <div class="app-genre-of-serials-list-inf-first">
+        <div class="app-genre-of-serials-list-inf-title">{{genreOfSerials.original_name}}</div>
+        <div class="tag"
+             [ngStyle]="{color: genreOfSerials.vote_average <= 7 ? 'red' : 'green'}">{{genreOfSerials.vote_average}}</div>
+      </div>
+      <div class="app-genre-of-serials-list-inf-second-year">{{genreOfSerials.first_air_date}}</div>
+    </div>
+  </a>
+</div>
