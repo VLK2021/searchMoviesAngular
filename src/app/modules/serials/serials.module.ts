@@ -9,6 +9,10 @@ import {SerialsRoutingModule} from "./serials-routing.module";
 import {SerialsService} from "./serials-services";
 import { SearchSerialComponent } from './serials-components/search-serial/search-serial.component';
 import {FormsModule} from "@angular/forms";
+import { GenresOfSerialsComponent } from './serials-components/genres-of-serials/genres-of-serials.component';
+import { GenreOfSerialsComponent } from './serials-components/genre-of-serials/genre-of-serials.component';
+import { GenresOfSerialsListComponent } from './serials-components/genres-of-serials-list/genres-of-serials-list.component';
+import { GenreOfSerialsListComponent } from './serials-components/genre-of-serials-list/genre-of-serials-list.component';
 
 
 @NgModule({
@@ -16,7 +20,11 @@ import {FormsModule} from "@angular/forms";
     SerialsComponent,
     SerialComponent,
     SerialDetailsComponent,
-    SearchSerialComponent
+    SearchSerialComponent,
+    GenresOfSerialsComponent,
+    GenreOfSerialsComponent,
+    GenresOfSerialsListComponent,
+    GenreOfSerialsListComponent
   ],
   imports: [
     CommonModule,

@@ -20,7 +20,6 @@ export class GenresComponent implements OnInit {
     //@ts-ignore
     this.genresService.getAll().subscribe(({genres}) => {
       this.genresMovie = genres;
-      console.log(genres);
     });
   }
 

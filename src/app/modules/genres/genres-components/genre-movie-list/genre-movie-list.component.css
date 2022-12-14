@@ -20,24 +20,24 @@
   border-radius: 0.5rem 0.5rem 0 0;
 }
 
-.app-genre-movie-list-inf{
+.app-genre-movie-list-inf {
   width: 100%;
   height: 25%;
   background: var(--var-bg-header);
-  border-radius: 0 0 0.5rem 0.5rem ;
+  border-radius: 0 0 0.5rem 0.5rem;
   padding: 0.3rem;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
 }
 
-.app-genre-movie-list-inf-first{
+.app-genre-movie-list-inf-first {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.app-genre-movie-list-inf-title{
+.app-genre-movie-list-inf-title {
   font-size: 1.5rem;
   font-weight: bold;
   color: var(--var-header-color);
@@ -62,7 +62,7 @@
 }
 
 
-.app-genre-movie-list-inf-second-year{
+.app-genre-movie-list-inf-second-year {
   width: 100%;
   background: var(--var-bg-header);
   text-align: center;
@@ -72,7 +72,7 @@
   color: var(--var-header-color);
 }
 
-a{
+a {
   text-decoration: none;
 }
 

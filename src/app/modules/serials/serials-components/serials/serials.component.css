@@ -98,12 +98,12 @@
 
 }
 
-/*a{*/
-/*  color: var(--var-header-color);*/
-/*  list-style: none;*/
-/*  text-transform: uppercase;*/
-/*  font-weight: bold;*/
-/*  text-decoration: none;*/
-/*}*/
+a{
+  color: var(--var-header-color);
+  list-style: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-decoration: none;
+}
 
 
