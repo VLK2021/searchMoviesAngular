@@ -11,7 +11,7 @@
   box-shadow: var(--var-box-shedow-header);
 }
 
-.app-genre a{
+.app-genre a {
   color: var(--var-header-color);
 }
 
@@ -20,7 +20,7 @@
 }
 
 .active {
-  color:  var(--var-a-hover);
+  color: var(--var-a-hover);
   font-weight: bold;
   cursor: default;
   opacity: 1;

@@ -6,11 +6,11 @@ import { HeaderComponent } from './app-components/header/header.component';
 import { FooterComponent } from './app-components/footer/footer.component';
 import {AppRoutingModule} from "./app-routing.module";
 import { NavigationComponent } from './app-components/navigation/navigation.component';
-import {FormsModule} from "@angular/forms";
 import { HomeComponent } from './app-components/home/home.component';
 import { CarouselComponent } from './app-components/carousel/carousel.component';
 import {HttpClientModule} from "@angular/common/http";
 import { NotFoundComponent } from './app-components/not-found/not-found.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 
 @NgModule({
@@ -27,6 +27,7 @@ import { NotFoundComponent } from './app-components/not-found/not-found.componen
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
