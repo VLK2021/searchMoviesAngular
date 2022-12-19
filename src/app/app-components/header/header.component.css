@@ -5,7 +5,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.2rem 1rem;
+  padding: 1rem;
+  box-shadow: var(--var-box-shedow-header);
 }
 
 .app-header-links {
@@ -18,14 +19,32 @@
 
 .icon {
   color: var(--var-header-color);
-  font-size: 1.5rem;
+  font-size: 2rem;
+}
+
+.icon:hover {
+  color: var(--var-a-hover);
 }
 
 .app-header-logo {
   width: 40%;
   padding: 0.2rem;
+  font-weight: bold;
+  font-style: inherit;
 }
 
 .app-header-tittle {
   width: 40%;
+  color: var(--var-header-color);
+  font-weight: bold;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 5px deepskyblue !important;
+  font-size: 2rem;
+}
+
+.app-header-logo-img {
+  width: 4rem;
+  font-weight: bold;
+  font-style: inherit;
+  text-shadow: 0 5px 15px deepskyblue;
 }

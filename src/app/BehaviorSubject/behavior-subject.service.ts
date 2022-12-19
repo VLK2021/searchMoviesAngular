@@ -7,6 +7,7 @@ import {BehaviorSubject} from "rxjs";
 })
 
 export class BehaviorSubjectService {
+
   storage = new BehaviorSubject('');
 
   constructor() {
