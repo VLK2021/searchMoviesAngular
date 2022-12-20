@@ -1,6 +1,6 @@
 import {environment} from "../../environments/environment";
 import {MY_KEY_API} from "./key.api";
-
+//@ts-ignore
 const {API: baseURL} = environment;
 
 export const urls = {
