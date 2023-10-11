@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {faFacebook, faInstagram, faLinkedin, faGithub, faTelegram} from "@fortawesome/free-brands-svg-icons";
+// import {faFacebook, faInstagram, faLinkedin, faGithub, faTelegram} from "@fortawesome/free-brands-svg-icons";
 
 
 @Component({
@@ -8,12 +8,14 @@ import {faFacebook, faInstagram, faLinkedin, faGithub, faTelegram} from "@fortaw
   styleUrls: ['./header.component.css']
 })
 
+
+
 export class HeaderComponent implements OnInit {
-  faFacebook = faFacebook;
-  faInstagram = faInstagram;
-  faLinkedin = faLinkedin;
-  faGithub = faGithub;
-  faTelegram = faTelegram;
+  // faFacebook = faFacebook;
+  // faInstagram = faInstagram;
+  // faLinkedin = faLinkedin;
+  // faGithub = faGithub;
+  // faTelegram = faTelegram;
 
   constructor() {
   }
