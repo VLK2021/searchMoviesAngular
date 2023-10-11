@@ -1,0 +1,18 @@
+.app-genres-of-serials {
+  width: 100%;
+  min-height: 100vh;
+  background: var(--var-bg-all);
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+
+.app-genres-of-serials-genre-block {
+  width: 20%;
+  padding: 1rem;
+}
+
+.routerOutlet {
+  width: 80%;
+  padding: 1rem;
+}

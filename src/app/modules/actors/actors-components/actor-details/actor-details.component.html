@@ -1,0 +1,24 @@
+<div class="app-actor-details">
+  <h1 class='app-actor-details-title'>{{actorDetails.name}}</h1>
+
+  <div class="app-actor-details-block_title_and_info">
+    <div class="app-actor-details-img">
+      <img [src]=IMG_URL+actorDetails.profile_path alt="No Image Available"/>
+    </div>
+
+    <div class="app-actor-details-block_title_and_info-block-info">
+      <div><strong class='app-actor-details-info-titles'>Birthday:</strong> {{actorDetails.birthday}}</div>
+      <div  *ngIf="actorDetails.deathday"><strong class='app-actor-details-info-titles'>Deathday:</strong> {{actorDetails.deathday}}</div>
+      <div><strong class='app-actor-details-info-titles'>Place of birthday:</strong> {{actorDetails.place_of_birth}}</div>
+      <div><strong class='app-actor-details-info-titles'>Popularity:</strong> {{actorDetails.popularity}}</div>
+    </div>
+  </div>
+
+  <div class="app-actor-details-biography">{{actorDetails.biography}}</div>
+
+  <div class="homePage" *ngIf="actorDetails.homepage"><strong class='app-actor-details-info-titles'>Homepage:</strong>
+    <a href="{{actorDetails.homepage}}" target="_blank">{{actorDetails.homepage}}</a>
+  </div>
+
+  <button (click)="goBack()" class="app-actor-details-btn">Back</button>
+</div>
