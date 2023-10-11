@@ -6,6 +6,7 @@ import {HttpClientModule} from "@angular/common/http";
 import { GenreComponent } from './genres-components/genre/genre.component';
 import { GenresMoviesListComponent } from './genres-components/genres-movies-list/genres-movies-list.component';
 import { GenreMovieListComponent } from './genres-components/genre-movie-list/genre-movie-list.component';
+import {RouterModule} from "@angular/router";
 
 
 
@@ -19,7 +20,8 @@ import { GenreMovieListComponent } from './genres-components/genre-movie-list/ge
   imports: [
     CommonModule,
     GenresRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule
   ],
   exports:[
     GenresComponent

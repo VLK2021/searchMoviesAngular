@@ -13,6 +13,7 @@ import { GenresOfSerialsComponent } from './serials-components/genres-of-serials
 import { GenreOfSerialsComponent } from './serials-components/genre-of-serials/genre-of-serials.component';
 import { GenresOfSerialsListComponent } from './serials-components/genres-of-serials-list/genres-of-serials-list.component';
 import { GenreOfSerialsListComponent } from './serials-components/genre-of-serials-list/genre-of-serials-list.component';
+import {RouterModule} from "@angular/router";
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import { GenreOfSerialsListComponent } from './serials-components/genre-of-seria
     CommonModule,
     HttpClientModule,
     SerialsRoutingModule,
-    FormsModule
+    FormsModule,
+    RouterModule
   ],
   exports: [
     SerialsComponent
