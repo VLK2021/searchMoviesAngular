@@ -29,6 +29,7 @@ img:hover {
 }
 
 .app-home-movies-block, .app-home-serials-block, .app-home-actors-block {
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;

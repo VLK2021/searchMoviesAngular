@@ -1,7 +1,7 @@
 <div class="carousel">
 
   <div class="carousel_item carousel_item-visible">
-    <img *ngIf="movies.length" [src]=IMG_URL+movies[0].poster_path alt="w">
+    <img *ngIf="movies.length" [src]=IMG_URL+movies[0].backdrop_path alt="w">
     <div class="linkToInfo">
       <a [routerLink]="['/movies', movies[0].id]">
         <button>MORE INFO</button>
@@ -10,7 +10,7 @@
   </div>
 
   <div class="carousel_item">
-    <img *ngIf="movies.length" [src]=IMG_URL+movies[1].poster_path alt="w">
+    <img *ngIf="movies.length" [src]=IMG_URL+movies[1].backdrop_path alt="w">
     <div class="linkToInfo">
       <a [routerLink]="['/movies', movies[1].id]">
         <button>MORE INFO</button>
@@ -19,7 +19,7 @@
   </div>
 
   <div class="carousel_item">
-    <img *ngIf="movies.length" [src]=IMG_URL+movies[2].poster_path alt="w">
+    <img *ngIf="movies.length" [src]=IMG_URL+movies[2].backdrop_path alt="w">
     <div class="linkToInfo">
       <a [routerLink]="['/movies', movies[2].id]">
         <button>MORE INFO</button>

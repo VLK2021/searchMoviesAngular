@@ -4,7 +4,7 @@
   <div class="app-home-movies">
     <h3>all movies</h3>
     <div class="app-home-movies-block">
-      <div *ngFor="let movie of movies.slice(0, 9)">
+      <div *ngFor="let movie of movies.slice(0, 8)">
         <a [routerLink]="['/movies', movie.id]">
           <img *ngIf="movies" [src]=IMG_URL+movie.poster_path alt="w">
         </a>
@@ -15,7 +15,7 @@
   <div class="app-home-serials">
     <h3>all serials</h3>
     <div class="app-home-serials-block">
-      <div *ngFor="let serial of serials.slice(0, 9)">
+      <div *ngFor="let serial of serials.slice(0, 8)">
         <a [routerLink]="['/serials', serial.id]">
           <img *ngIf="movies" [src]=IMG_URL+serial.poster_path alt="w">
         </a>
@@ -26,7 +26,7 @@
   <div class="app-home-actors">
     <h3>all actors</h3>
     <div class="app-home-actors-block">
-      <div *ngFor="let actor of actors.slice(0, 9)">
+      <div *ngFor="let actor of actors.slice(0, 8)">
         <a [routerLink]="['/actor', actor.id]">
           <img *ngIf="movies" [src]=IMG_URL+actor.profile_path alt="w">
         </a>
